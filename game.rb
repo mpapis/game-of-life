@@ -22,7 +22,7 @@ class Game
   def start( *arr )
     opts = arr.pop if arr.last.instance_of? Hash
     arr.each do |xy|
-      set(*xy, Game::alive, opts)
+      set(*xy, Game::alive, opts||{})
     end
   end
 
