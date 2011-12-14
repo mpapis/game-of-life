@@ -15,14 +15,8 @@ BEACON=[ [1,1], [2,1], [1,2], [2,2], [3,3], [4,3], [3,4], [4,4]]
 # Spaceships
 GLIDER=[ [2,1], [3,2], [1,3], [2,3], [3,3] ]
 
-game = Game.new(40,40)
-game.start *BLINKER, :transform => [10,10]
-game.start *BLOCK, :transform => [20,10]
-game.start *LOAF, :transform => [10,20]
-game.start *BOAT, :transform => [20,20]
-game.start *BEE_HIVE, :transform => [10,30]
-game.start *TOAD, :transform => [20,30]
-game.start *BEACON, :transform => [30,10]
-game.start *WHEEL, :transform => [30,20]
-game.start *GLIDER, :transform => [30,31]
-game.play_console 0.02
+game = Game.new(40,41)
+game.start [1,1], [1,2], [1,3], [1,4], [1,5], [1,6], [1,7], [1,8], [1,9], [1,10], :transform => [12,14]
+game.start [1,1], [1,2], [1,3], [1,4], [1,5], [1,6], [1,7], [1,8], [1,9], [1,10], :transform => [19,14]
+game.start [1,1], [1,2], [1,3], [1,4], [1,5], [1,6], [1,7], [1,8], [1,9], [1,10], :transform => [26,14]
+game.play_console #0.02

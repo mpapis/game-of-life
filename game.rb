@@ -73,7 +73,7 @@ class Game
         @world[@plane][y...y+@size_x] * ' '
       end * "\n"
     )
-    printf "\n"
+    printf "\nCTRL+C to break\n"
     sleep wait if wait
   end
 
@@ -82,6 +82,8 @@ class Game
       tick
       display_console wait
     end
+  rescue Interrupt
+    puts "\nByeBye\n"
   end
 
 private
