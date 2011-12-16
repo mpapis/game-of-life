@@ -78,6 +78,7 @@ class Game
   end
 
   def play_console wait=nil
+    system 'tput clear'
     loop do
       tick
       display_console wait
@@ -97,7 +98,7 @@ private
   end
 
   def clear_screen
-    @clear_sequence||=`tput clear`
+    @clear_sequence||=`tput cup 0 0` #`tput clear`
     printf @clear_sequence
     printf "game #{@count}:\n"
   end
